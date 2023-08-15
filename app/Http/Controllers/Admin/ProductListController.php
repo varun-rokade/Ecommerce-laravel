@@ -27,12 +27,8 @@ class ProductListController extends Controller
         $category = $request->category;
         // print_r($category);
         // die();
-        $subcategory = $request->subcategoy;
-        // print_r($subcategory);
-        // die();
+        $subcategory = $request->subcategory;
         $productSubCategory = ProductList::where('category',$category)->where('subcategoy',$subcategory)->get();
-        // print_r($productSubCategory);
-        // die();
         return $productSubCategory;
     }
 
